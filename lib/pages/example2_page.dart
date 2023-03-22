@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widget/item_category_widget.dart';
+
 class Example2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,6 +11,7 @@ class Example2Page extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,6 +84,9 @@ class Example2Page extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 24.0,
+              ),
               Container(
                 decoration: BoxDecoration(boxShadow: [
                   BoxShadow(
@@ -94,7 +100,13 @@ class Example2Page extends StatelessWidget {
                     filled: true,
                     fillColor: Colors.white,
                     hintText: "Search",
-                    suffixIcon: const Icon(Icons.search),
+                    suffixIcon: const Icon(
+                      Icons.search,
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 18,
+                      vertical: 16,
+                    ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(14.0),
                       borderSide: BorderSide.none,
@@ -104,6 +116,38 @@ class Example2Page extends StatelessWidget {
                       borderSide: BorderSide.none,
                     ),
                   ),
+                ),
+              ),
+              const SizedBox(
+                height: 24.0,
+              ),
+              const Text(
+                "Category",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ItemCategoryWidget(
+                      icons: "home",
+                      text: "House",
+                      isSelect: false,
+                    ),
+                    ItemCategoryWidget(
+                      icons: "house",
+                      text: "Hotel",
+                      isSelect: false,
+                    ),
+                    ItemCategoryWidget(
+                      icons: "city",
+                      text: "Apartment",
+                      isSelect: true,
+                    ),
+                  ],
                 ),
               ),
             ],
