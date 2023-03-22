@@ -5,6 +5,9 @@ import '../widget/item_category_widget.dart';
 class Example2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: const Color(0xffF9FBFC),
       body: SafeArea(
@@ -128,6 +131,9 @@ class Example2Page extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
+              const SizedBox(
+                height: 14.0,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -150,6 +156,59 @@ class Example2Page extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 24.0,
+              ),
+              const Text(
+                "Recomendation",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(12.0),
+                color: Colors.amber,
+                constraints: BoxConstraints(
+                  maxWidth: width * 0.5,
+                ),
+                child: Column(
+                  children: [
+                    //Imagen Principal
+                    Container(
+                      width: width * 0.5,
+                      height: height * 0.20,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16.0),
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    //Titulo y Puntación
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text("Minimalist House"),
+                        Row(
+                          children: const [
+                            Icon(
+                              Icons.star,
+                            ),
+                            Text(
+                              "4.5",
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
