@@ -1,5 +1,5 @@
-import 'package:codigo_ui/widget/ietm_slider_widget.dart';
 import 'package:codigo_ui/widget/item_history_widget.dart';
+import 'package:codigo_ui/widget/item_slider_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
