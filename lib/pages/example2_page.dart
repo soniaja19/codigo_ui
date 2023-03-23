@@ -202,6 +202,49 @@ class Example2Page extends StatelessWidget {
                     ItemRecommendation2Widget(),
                     ItemRecommendation2Widget(),
                     ItemRecommendation2Widget(),
+                    Container(
+                      width: double.infinity,
+                      height: 200,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              "https://images.pexels.com/photos/1390403/pexels-photo-1390403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Stack(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.topCenter,
+                                colors: [
+                                  Colors.black.withOpacity(0.06),
+                                  Colors.transparent,
+                                ],
+                              ),
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              const Text(
+                                "Descubre miles de oportunidades de empleo en el buscador Google",
+                              ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: const Text("Information"),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 300.0,
+                    ),
                   ],
                 ),
               ),
