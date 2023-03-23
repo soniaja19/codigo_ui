@@ -98,7 +98,7 @@ class Example4Page extends StatelessWidget {
                         color: Colors.white,
                         decoration: TextDecoration.underline,
                         decorationColor: Colors.white,
-                        decorationThickness: 2.5,
+                        decorationThickness: 1.0,
                       ),
                     ),
                   ],
