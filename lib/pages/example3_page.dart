@@ -52,6 +52,9 @@ class ExamplePage3 extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
+                    SizedBox(
+                      height: height * 0.03,
+                    ),
                     const Text(
                       "You have goals",
                       style: TextStyle(
@@ -69,6 +72,9 @@ class ExamplePage3 extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         letterSpacing: -0.9,
                       ),
+                    ),
+                    SizedBox(
+                      height: height * 0.03,
                     ),
                     TextField(
                       decoration: InputDecoration(
@@ -88,6 +94,9 @@ class ExamplePage3 extends StatelessWidget {
                           ),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: height * 0.025,
                     ),
                     TextField(
                       decoration: InputDecoration(
@@ -147,23 +156,27 @@ class ExamplePage3 extends StatelessWidget {
                     SizedBox(
                       height: height * 0.04,
                     ),
-                    Text(
-                      "Your username or password?",
-                      style: GoogleFonts.montserrat(
-                        fontSize: 16.0,
-                        color: const Color(0xff2E303E),
-                        fontWeight: FontWeight.w600,
+                    Center(
+                      child: Text(
+                        "Your username or password?",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16.0,
+                          color: const Color(0xff2E303E),
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                     SizedBox(
                       height: height * 0.03,
                     ),
-                    Text(
-                      "By proceding you also agree to the therms of Service nd Privacy Pollcy",
-                      style: GoogleFonts.montserrat(
-                        fontSize: 14.0,
-                        color: const Color(0xff2E303E).withOpacity(0.6),
-                        fontWeight: FontWeight.w400,
+                    Center(
+                      child: Text(
+                        "By proceding you also agree to the therms of Service nd Privacy Pollcy",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14.0,
+                          color: const Color(0xff2E303E).withOpacity(0.6),
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ],
