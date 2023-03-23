@@ -65,7 +65,7 @@ class ExamplePage3 extends StatelessWidget {
                       ),
                     ),
                     const Text(
-                      "Invest to archive them",
+                      "Invest to archive them.",
                       style: TextStyle(
                         color: Color(0xff2E303E),
                         fontSize: 24.0,
